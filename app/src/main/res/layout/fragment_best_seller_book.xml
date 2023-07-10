@@ -11,8 +11,10 @@
         android:id="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="15dp"
         android:textAppearance="?attr/textAppearanceListItem"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/book_image"
         tools:text="title" />
@@ -21,7 +23,6 @@
         android:id="@+id/book_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/book_title"
@@ -31,6 +32,8 @@
         android:id="@+id/ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="ranking" />
@@ -39,6 +42,7 @@
         android:id="@+id/book_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/ranking"
         app:layout_constraintTop_toTopOf="@id/ranking"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
@@ -47,6 +51,9 @@
         android:id="@+id/book_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="4"
         app:layout_constraintStart_toStartOf="@id/book_author"
         app:layout_constraintTop_toBottomOf="@+id/book_author"
         tools:text="description" />
@@ -55,6 +62,7 @@
         android:id="@+id/buy_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#567b95"
         android:text="BUY ON AMAZON"
         app:layout_constraintStart_toStartOf="@id/book_description"
         app:layout_constraintTop_toBottomOf="@+id/book_description" />

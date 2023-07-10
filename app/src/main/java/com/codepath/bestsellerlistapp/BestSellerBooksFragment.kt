@@ -1,5 +1,7 @@
 package com.codepath.bestsellerlistapp
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -94,6 +96,7 @@ class BestSellerBooksFragment : Fragment(), OnListFragmentInteractionListener {
                 val arrayBookType = object: TypeToken<List<BestSellerBook>>() {}.type
 //                var bookImageUrl: String? = booksRawJSON.get("book_image").toString()
                 val models : List<BestSellerBook> = gson.fromJson(booksRawJSON, arrayBookType) // Fix me!
+
                 recyclerView.adapter = BestSellerBooksRecyclerViewAdapter(models, this@BestSellerBooksFragment)
 
                 // Look for this in Logcat:

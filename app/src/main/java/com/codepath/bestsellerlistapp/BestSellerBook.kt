@@ -28,5 +28,7 @@ class BestSellerBook {
     @SerializedName("description")
     var description: String? = null
 
-    //TODO-STRETCH-GOALS amazonUrl
+    @JvmField
+    @SerializedName("amazon_product_url")
+    var amazonUrl: String? = null
 }
